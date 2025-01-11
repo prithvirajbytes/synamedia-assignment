@@ -1,0 +1,27 @@
+{
+  "name": "synamedia-assignment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prithvirajbytes/synamedia-assignment.git"
+  },
+  "author": "prithviraj.biswas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prithvirajbytes/synamedia-assignment/issues"
+  },
+  "homepage": "https://github.com/prithvirajbytes/synamedia-assignment#readme",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.21.2",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
