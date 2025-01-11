@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "154f20ed-51b6-4f5f-a729-7e5ae968d04a",
+		"name": "Hotel Room Booking System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25710908"
+	},
+	"item": [
+		{
+			"name": "Book Room",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"checkIn\": \"2025-01-15\",\n  \"checkOut\": \"2025-01-20\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/book-room",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"book-room"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Booking Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/booking-details?email=john.doe@example.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"booking-details"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "john.doe@example.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View All Guests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/all-guests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"all-guests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Booking",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"john.doe@example.com\",\n  \"roomNumber\": 101\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/cancel-booking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cancel-booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify Booking",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"john.doe@example.com\",\n  \"roomNumber\": 101,\n  \"checkIn\": \"2025-01-18\",\n  \"checkOut\": \"2025-01-22\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/modify-booking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"modify-booking"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
